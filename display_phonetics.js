@@ -34,10 +34,11 @@ function number_to_phonetic(num) {
 }
 
 
-function display_phonetics(args) {
-    args.forEach(e => {
-        e.split()
-    });
+function display_phonetics(nums) {
+    const result = nums.map(n => 
+        number_to_phonetic(n)
+    );
+    console.log(result.join(', '));
 }
 
 module.exports = display_phonetics;
